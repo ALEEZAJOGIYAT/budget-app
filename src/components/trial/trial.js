@@ -1,3 +1,4 @@
+
 {
   /* <div className="app_wrapper">
 <div>
@@ -74,3 +75,23 @@
 </div>
 </div> */
 }
+
+
+// const [email, setEmail] = useState("");
+//   const [name, setName] = useState("");
+//   const [phoneNo, setPhoneNo] = useState("");
+//   const [address, setAddress] = useState("");
+//   const [errors, setErrors] = useState({});
+
+//   const handleChangeEmail = (e) => {
+//     setEmail = e.target.value;
+//   };
+//   const handleChangeName = (e) => {
+//     setName = e.target.value;
+//   };
+//   const handleChangePhoneNo = (e) => {
+//     setPhoneNo = e.target.value;
+//   };
+//   const handleChangeAddress = (e) => {
+//     setAddress = e.target.value;
+//   };

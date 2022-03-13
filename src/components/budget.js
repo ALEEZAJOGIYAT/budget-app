@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { MdEdit, MdDelete, MdSend } from "react-icons/md";
 import {
   Alert,
-  Modal,
   AlertTitle,
   CardActions,
   InputLabel,
@@ -25,6 +24,7 @@ import {
   Button,
   InputAdornment,
 } from "@mui/material";
+import { Modal } from "./modal/index";
 import Lottie from "react-lottie";
 import animationData from "../lotties/calculator.json";
 import Pdf from "react-to-pdf";
@@ -123,6 +123,9 @@ export const BudgetCalculator = () => {
     items[index].disabled = true;
     setBudgetInfo(items);
   };
+  const name = "YASIR KHAN";
+  const all_data = [...budgetInfo];
+  // console.log(all_data)
 
   const handleClear = () => {
     // setShowClear(true);
@@ -203,9 +206,43 @@ export const BudgetCalculator = () => {
           </Grid>
         </Box>
 
+        {/* <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+      </Pdf>
+      <div ref={ref}>
+        {mapfunction.map((val, indx) => {
+          return (
+            <>
+              <p> {val.a}</p>
+            </>
+          );
+        })}
+      </div> */}
+
+
+        <div style={{ marginTop: 10 }}>
+          <div>
+            <button
+              type="button"
+              className="btn btn-outline-success"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Review Budget
+            </button>
+            {budgetInfo?.map((items, index, id) => {
+              return (
+                <div>
+                  <Modal item={items} id={items.id} key={index}/>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
         {budgetInfo?.map((items, index) => {
           return (
-            <Container>
+            <Container key={items.id}>
               <List>
                 <ListItem>
                   <input
