@@ -35,6 +35,7 @@ export const BudgetCalculator = () => {
   const [budgetInfo, setBudgetInfo] = useState([]);
   const [edit, setEdit] = useState(false);
   const [showClear, setShowClear] = useState(false);
+  const [total, setTotal] = useState();
 
   const handleAmount = (e) => {
     setAmount(e.target.value);
@@ -101,6 +102,7 @@ export const BudgetCalculator = () => {
     const items = [...budgetInfo];
     items[index].disabled = true;
     setBudgetInfo(items);
+
   };
 
   const handleClear = () => {
@@ -174,30 +176,11 @@ export const BudgetCalculator = () => {
             </Button>
           </Grid>
         </Box>
-        <div style={{ marginTop: 10 }}>
-          <div>
-            <button
-              type="button"
-              className="btn btn-outline-success"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Review Budget
-            </button>
-            {budgetInfo?.map((items, index, id) => {
-              return (
-                <div>
-                  <Modal item={items} id={items.id} key={index}/>
-                </div>
-              );
-            })}
-          </div>
-        </div>
 
         {budgetInfo?.map((items, index) => {
           return (
             <Container key={items.id}>
-              <List>
+              <List style={{display:'flex', flexDirection:'row', alignItems:'center', marginLeft:'-100px'}}>
                 <ListItem>
                   <input
                     className="edit_charge"
@@ -225,6 +208,23 @@ export const BudgetCalculator = () => {
             </Container>
           );
         })}
+
+        <div style={{ marginTop: 10 }}>
+          <div>
+            <button
+              type="button"
+              className="btn btn-outline-success"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Review Budget
+            </button>
+            <Modal item={budgetInfo}/>
+          </div>
+        </div>
+        <br/>
+        <br/>
+
         {showClear ? (
           <div>
             <Button
