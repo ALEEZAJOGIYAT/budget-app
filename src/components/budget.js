@@ -118,12 +118,6 @@ export const BudgetCalculator = () => {
             flexDirection: "initial",
           }}
         >
-          <Lottie
-            style={{ marginTop: 38 }}
-            options={defaultOptions}
-            height={100}
-            width={100}
-          />
           <Typography sx={{ marginTop: 10, fontSize: 25 }} variant={"h4"}>
             BUDGET CALCULATOR
           </Typography>
