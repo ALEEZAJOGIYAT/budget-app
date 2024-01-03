@@ -33,9 +33,9 @@
   width: 30rem;
   position: relative;
   overflow: hidden;
-  // align-items: center;
+  /* // align-items: center;
   // margin-left: 46rem;
-  // margin-top: 8rem;
+  // margin-top: 8rem; */
   align-items: center;
   box-shadow: 0 0.2rem 3rem rgba(124, 100, 100, 0.2);
   box-sizing: border-box;
@@ -48,12 +48,11 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  margin-left: -35px;
+  margin-left: -75px;
   margin-top: 25px;
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
-  width: 400px;
-  // border-width: 10px;
+  width: 350px;
 }
 
 input:focus {

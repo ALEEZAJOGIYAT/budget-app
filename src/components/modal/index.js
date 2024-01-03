@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 export const Modal = ({ item,id }) => {
@@ -41,7 +41,7 @@ export const Modal = ({ item,id }) => {
                 </div>
                 <div className="form-group">
                   <label className="labels form-label" for="gpa">
-                    Total Spend
+                    Total Spend:
                   </label>
                 </div>
 
@@ -52,12 +52,6 @@ export const Modal = ({ item,id }) => {
                     data-bs-dismiss="modal"
                   >
                     Cancel
-                  </button>
-                  <button
-                    type="button"
-                    className="btn pdf"
-                  >
-                    Generate PDF
                   </button>
                 </div>
               </div>

@@ -1,41 +1,25 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { MdEdit, MdDelete, MdSend } from "react-icons/md";
 import {
   Alert,
   AlertTitle,
-  CardActions,
-  InputLabel,
   ListItem,
   List,
-  ListItemText,
-  makeStyles,
-  ListItemButton,
   Container,
-  Toolbar,
   Divider,
   Typography,
   Grid,
-  CardActionArea,
-  Card,
-  CardContent,
-  Input,
   Box,
   TextField,
   Button,
-  InputAdornment,
 } from "@mui/material";
 import { Modal } from "./modal/index";
 import Lottie from "react-lottie";
 import animationData from "../lotties/calculator.json";
-import Pdf from "react-to-pdf";
-import "./style.scss";
-
-// const useStyles = makeStyles((createTheme) => ({}));
+import "./style.css";
 
 export const BudgetCalculator = () => {
   const ref = React.createRef();
-
-  let mapfunction = [{ a: "helo1" }, { a: "helo2" }, { a: "helo3" }];
 
   const defaultOptions = {
     loop: true,
@@ -46,13 +30,10 @@ export const BudgetCalculator = () => {
     },
   };
 
-  // const color = indigo[900];
-  // const classes = useStyles();
   const [amount, setAmount] = useState();
   const [charge, setCharge] = useState("");
   const [budgetInfo, setBudgetInfo] = useState([]);
   const [edit, setEdit] = useState(false);
-  const [calAmount, setCalAmount] = useState(0);
   const [showClear, setShowClear] = useState(false);
 
   const handleAmount = (e) => {
@@ -78,8 +59,6 @@ export const BudgetCalculator = () => {
       setAmount();
       setCharge("");
       setShowClear(!showClear);
-
-      // setSubmit(true);
     } else {
       <Alert>
         <AlertTitle>Enter only positive or float value</AlertTitle>
@@ -123,12 +102,8 @@ export const BudgetCalculator = () => {
     items[index].disabled = true;
     setBudgetInfo(items);
   };
-  const name = "YASIR KHAN";
-  const all_data = [...budgetInfo];
-  // console.log(all_data)
 
   const handleClear = () => {
-    // setShowClear(true);
     setBudgetInfo([]);
   };
 
@@ -173,11 +148,6 @@ export const BudgetCalculator = () => {
                 autoFocus
                 value={charge}
                 onChange={handleCharge}
-                // InputProps={{
-                //   startAdornment: (
-                //     <InputAdornment position="end"></InputAdornment>
-                //   ),
-                // }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -195,7 +165,6 @@ export const BudgetCalculator = () => {
             </Grid>
             <Button
               type="submit"
-              // fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2, marginLeft: 20, marginTop: 8 }}
               endIcon={<MdSend />}
@@ -205,21 +174,6 @@ export const BudgetCalculator = () => {
             </Button>
           </Grid>
         </Box>
-
-        {/* <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
-      </Pdf>
-      <div ref={ref}>
-        {mapfunction.map((val, indx) => {
-          return (
-            <>
-              <p> {val.a}</p>
-            </>
-          );
-        })}
-      </div> */}
-
-
         <div style={{ marginTop: 10 }}>
           <div>
             <button
@@ -284,7 +238,6 @@ export const BudgetCalculator = () => {
         ) : (
           ""
         )}
-        {/* <Typography variant={"h4"}>You spend {calAmount}</Typography> */}
       </Container>
     </>
   );
