@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/budget-app/static/css/main.de224ecf.css",
+    "main.js": "/budget-app/static/js/main.5b14cbfa.js",
+    "static/js/787.c4271f98.chunk.js": "/budget-app/static/js/787.c4271f98.chunk.js",
+    "index.html": "/budget-app/index.html",
+    "main.de224ecf.css.map": "/budget-app/static/css/main.de224ecf.css.map",
+    "main.5b14cbfa.js.map": "/budget-app/static/js/main.5b14cbfa.js.map",
+    "787.c4271f98.chunk.js.map": "/budget-app/static/js/787.c4271f98.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de224ecf.css",
+    "static/js/main.5b14cbfa.js"
+  ]
+}
