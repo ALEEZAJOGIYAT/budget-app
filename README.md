@@ -1,3 +1,4 @@
 # BUDGET CALCULATOR
 
-This is a budget calcuator that is basically calcuating sub totla amount of user's orders
+This is a budget calculator that calcuating subtotal amount of users' orders
+how it's working?
